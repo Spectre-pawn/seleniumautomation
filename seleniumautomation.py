@@ -7,7 +7,7 @@ import time
 username = "pawanshejwal19@gmail.com"
 with open('password.txt', 'r') as myfile:
          Password = myfile.read().replace('\n', '')
-      self.slow_typing(password, Password)
+    
 
 # initialize the Chrome driver
 driver = webdriver.Chrome("./driver/chromedriver")
