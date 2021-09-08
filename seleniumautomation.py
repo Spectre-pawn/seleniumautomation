@@ -5,7 +5,9 @@ import time
 
 # credentials
 username = "pawanshejwal19@gmail.com"
-password = "pw_IndiaTest!"
+with open('password.txt', 'r') as myfile:
+         Password = myfile.read().replace('\n', '')
+      self.slow_typing(password, Password)
 
 # initialize the Chrome driver
 driver = webdriver.Chrome("./driver/chromedriver")
@@ -18,7 +20,7 @@ driver.find_element_by_id("login_username").send_keys(username)
 
 # find password input field and insert password 
 
-driver.find_element_by_id("login_password").send_keys(password)
+driver.find_element_by_id("login_password").send_keys(Password)
 # click login button
 driver.find_element_by_id("login_button").click()
 time.sleep(40)
